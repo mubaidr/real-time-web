@@ -41,14 +41,7 @@ function train(data) {
   trainedNet = net.toFunction();
 }
 
-const tokens = {
-  consumer_key: 'MoQRp4aI92U3pxkbemrBBCfjc',
-  consumer_secret: '1Tp6lGIll9FsYSZQXVLLgJQZG46mpStmKq0teUm7PwpXG7o888',
-  access_token: '3077967255-P1POfezTGX6I6zt8f9sIneGcXFhw9gMIHpu4kiE',
-  access_token_key: '3077967255-P1POfezTGX6I6zt8f9sIneGcXFhw9gMIHpu4kiE',
-  access_token_secret: 'jJ64F09TIi9rnixldoBenWW5xBhyg3gJgOvUO7t0e0tNM'
-}
-
+// eslint-disable-next-line
 const client = new Twitter(tokens)
 const params = {
   screen_name: 'realdonaldtrump',
@@ -99,11 +92,15 @@ async function getTweets() {
 getTweets()
 
 io.on('connection', (socket) => {
-  socket.on('join', (message) => {})
+  socket.on('join', (message) => {
+    console.log(message)
+  })
 })
 
 io.on('connection', (socket) => {
-  socket.on('new message', (message) => {})
+  socket.on('new message', (message) => {
+    console.log(message)
+  })
 })
 
 function execute(input) {
