@@ -13,13 +13,13 @@ This project was build using [yarn].
 
 To install use
 
-```
+```sh
 yarn install
 ```
 
 And to run you can use
 
-```
+```sh
 node app.js
 ```
 
