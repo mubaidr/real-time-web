@@ -10,7 +10,6 @@ const io = socketIO(server);
 const path = require('path')
 let dataTweet = []
 let result
-let ok = 'hoi'
 app.set('view engine', 'ejs')
 const publicPath = path.join(__dirname, './public')
 app.use(express.static(publicPath))
@@ -66,7 +65,7 @@ getTweets('barackobama')
 			})
 		}).then(() => {
 			train(getTrainingData(dataTweet))
-			console.log(trainedNet(encode(adjustSize('Last night, it was my great honor to host America’s senior defense and military leaders for dinner at the White House. America’s military is the GREATEST fighting force in the history of the world. They all have my pledge of unwavering commitment to our men and women in uniform! '))));
+			console.log(trainedNet(encode(adjustSize('Last night, it was my great honor to host America’s senior defense and military leaders for dinner at the White House. America’s military is the GREATEST fighting force in the history of the world. They all have my pledge of unwavering commitment to our men and women in uniform!'))));
 
 			console.log(trainedNet(encode(adjustSize('Incredible to have a Chicago team in the Final Four. I’ll take that over an intact bracket any day! Congratulations to everybody @loyolachicago - let’s keep it going!'))));
 		})
@@ -76,10 +75,7 @@ getTweets('barackobama')
 
 	app.get('/', (req, res) => {
 		console.log(dataTweet)
-		res.render('index', {
-			result: result,
-			ok: ok
-		})
+		res.render('index')
 	})
 	
 	io.on('connection', (socket) => {
