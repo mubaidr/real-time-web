@@ -5,6 +5,10 @@
   "repository": "https://github.com/lordpoint/neural-network-author-classifier.git",
   "author": "Mohammed Mulazada <thisismoniac@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "devDependencies": {
     "dotenv": "^5.0.1",
     "get-tweets": "^4.0.0",
