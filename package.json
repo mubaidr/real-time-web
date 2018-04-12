@@ -1,0 +1,20 @@
+{
+  "name": "neural-network-author-classifier",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lordpoint/neural-network-author-classifier.git",
+  "author": "Mohammed Mulazada <thisismoniac@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "get-tweets": "^4.0.0",
+    "twitter": "^1.7.1",
+    "twitter-tokens": "^1.0.3"
+  },
+  "dependencies": {
+    "brain.js": "^1.1.2",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "socket.io": "^2.1.0"
+  }
+}
